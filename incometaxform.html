@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income and Tax Calculator</title>
+    <script src ="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="incometaxform.css">
+</head>
+
+<body>
+    <form>
+        <h3>INCOME AND TAX CALCULATOR</h3>
+        <label for="assessmentyear">Assessment Year</label>
+        <select id="assessmentyears" name="assessmentyears">
+            <option value="select">Select</option>
+            <option value="y2425">2024-2025</option>
+            <option value="y2324">2023-2024</option>
+            <option value="y2223">2022-2023</option>
+            <option value="y2122">2021-2022</option>
+        </select><br>
+        <label for="gender">Male / Female / Senior Citizen</label>
+        <select id="gender" name="gender">
+            <option value="select">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="seniorcitizen">Senior Citizen</option>
+            <option value="supersenior">Super Senior Citizen</option>
+        </select><br>
+        <label for="resistatus">Residential Status</label>
+        <select id="resistatus" name="resistatus">
+            <option value="select">Select</option>
+            <option value="resident">Resident</option>
+            <option value="nonresident">Non-Resident</option>
+            <option value="notordinary">Not Ordinary Resident</option>
+        </select><br>
+        <h4>Income</h4>
+        <label for="salary">Income from Salary (Income from salary after standard deduction of Rs.50000.)</label>
+        <input type="text" id="salary" name="salary"><br>
+        <label for="houseincome">Income From House Property </label>
+        <input type="text" id="houseincome" name="houseincome"><br>
+        <label for="capitalgain">Capital Gains</label>
+        <input type="text" id="capitalgain" name="capitalgain"><br>
+        <label for="othersource">Income From Other Sources</label>
+        <input type="text" id="othersource" name="othersource"><br>
+        <h4>Deduction</h4>
+        <label for="d80c">Deduction for 80c </label>
+        <input type="text" id="d80c" name="d80c"><br>
+        <label for="dnps">Deduction for NPS</label>
+        <input type="text" id="dnps" name="dnps"><br>
+        <label for="medicalinsurance">Deduction for Medical Insurance</label>
+        <input type="text" id="medicalinsurance" name="medicalinsurance"><br>
+        <button id="submit" class="submit" onclick="taxableincome()">Calculate</button>
+        <button id="reset" class="reset">Reset</button>
+    </form>
+    <script src ="incometaxform.js"></script>
+</body>
+
+</html>
